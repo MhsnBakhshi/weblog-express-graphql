@@ -1,0 +1,49 @@
+{
+  "name": "weblog",
+  "developer": "https://t.me/iDvMH",
+  "github": "https://github.com/mhsnbakhshi",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "graphql & express blog project ;)",
+  "main": "server.js",
+  "scripts": {
+    "dev": "dotenv -e .env nodemon server.js",
+    "db": "dotenv -e .env -- sequelize-cli db:create --config ./configs/sequelizeConfigs.js",
+    "migrate": "dotenv -e .env -- sequelize-cli db:migrate --config ./configs/sequelizeConfigs.js"
+  },
+  "keywords": [
+    "weblog",
+    "blog",
+    "nodejs",
+    "express",
+    "graphql",
+    "apollo server",
+    "apollo",
+    "redis",
+    "mysql",
+    "graphql-upload"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "graphql-upload": "^16.0.2",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.2",
+    "request": "^2.88.2",
+    "sequelize": "^6.37.3",
+    "sharp": "^0.33.5",
+    "slugify": "^1.6.6",
+    "svg-captcha": "^1.4.0",
+    "uuid": "^10.0.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
+    "nodemon": "^3.1.4",
+    "sequelize-cli": "^6.6.2"
+  }
+}
