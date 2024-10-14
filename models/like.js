@@ -1,23 +1,41 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Like extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+import { DataTypes } from "sequelize";
+
+export const Like = (sequelize) => {
+  return sequelize.define(
+    "likes",
+    {
+      id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true,
+      },
+      article_id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        alloNull: false,
+        references: {
+          model: "articles",
+          key: "id",
+        },
+
+        onDelete: "CASCADE",
+      },
+      user_id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        alloNull: false,
+        references: {
+          model: "users",
+          key: "id",
+        },
+
+        onDelete: "CASCADE",
+      },
+    },
+    {
+      tableName: "likes",
+      timestamps: true,
+      createdAt: "created_at",
+      updatedAt: "updated_at",
     }
-  }
-  Like.init({
-    test: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'Like',
-  });
-  return Like;
+  );
 };
