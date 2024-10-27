@@ -4,6 +4,8 @@ import * as responsesTypes from "./types/responses.types.js";
 import * as articleTypes from "./types/article.types.js";
 import * as fileTypes from "./types/file.types.js";
 import * as tagTypes from "./types/tag.types.js";
+import * as bookMarkTypes from "./types/bookMark.types.js";
+import * as likeTypes from "./types/like.types.js";
 
 export const schema = `
       scalar Upload
@@ -21,6 +23,8 @@ export const schema = `
       ${articleTypes.createArticleInput}
       ${fileTypes.File}
       ${tagTypes.Tag}
+      ${likeTypes.Like}
+      ${bookMarkTypes.BookMark}
        
       type Query {
       users (page: Int!, limit: Int!): [User!]!
@@ -33,6 +37,8 @@ export const schema = `
       findArticleBuySlug (slug: String!): [Article]
       findArticleBuyTag (tag: String!): [Article]
       getAllTag: [Tag!]!
+      getAllBookMarks (page: Int, limit: Int): [BookMark!]!
+      getAllLikes (articleId: Int!): [Like]
       }
 
       type Mutation {
@@ -53,5 +59,9 @@ export const schema = `
       removeTagArticle (articleID: Int!, tagID: Int!): Response!
       removeTagFromAdmin (tagID: Int!): Response!
       removeAllTag : Response!
+      addBookMark (articleId: Int!): Response!
+      removeBookMark (articleId: Int!): Response!
+      addLike (articleId: Int!): Response!
+      disLike (articleId: Int!): Response!
       }
 `;

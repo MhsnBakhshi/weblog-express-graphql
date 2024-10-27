@@ -2,7 +2,8 @@ import * as userResolvers from "./resolvers/user.resolvers.js";
 import * as captchaResolvers from "./resolvers/captcha.resolvers.js";
 import * as articleResolvers from "./resolvers/article.resolvers.js";
 import * as tagResolvers from "./resolvers/tag.resolvers.js";
-
+import * as likeResolvers from "./resolvers/like.resolvers.js";
+import * as bookMarkResolvers from "./resolvers/bookMark.resolvers.js";
 
 export const RootResolvers = {
   Query: {
@@ -16,6 +17,8 @@ export const RootResolvers = {
     findArticleBuySlug: articleResolvers.findArticleBuySlug,
     findArticleBuyTag: articleResolvers.findArticleBuyTag,
     getAllTag: tagResolvers.getAllTag,
+    getAllLikes: likeResolvers.getAllLikes,
+    getAllBookMarks: bookMarkResolvers.getAllBookMarks,
   },
 
   Mutation: {
@@ -36,5 +39,9 @@ export const RootResolvers = {
     removeTagArticle: tagResolvers.removeTagArticle,
     removeTagFromAdmin: tagResolvers.removeTagFromAdmin,
     removeAllTag: tagResolvers.removeAllTag,
+    addBookMark: bookMarkResolvers.addBookMark,
+    removeBookMark: bookMarkResolvers.removeBookMark,
+    addLike: likeResolvers.addLike,
+    disLike: likeResolvers.disLike,
   },
 };
