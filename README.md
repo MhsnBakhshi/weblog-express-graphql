@@ -1,7 +1,7 @@
 ![cover](https://github.com/MhsnBakhshi/weblog-express-graphql/blob/main/graphwl.png)
  
 ## About Project
-blog project is similar to the virgool (https://virgool.io/home) website with features such as the admin & user panel and user authentication system and otp code sending system and connection to the MySQL & Redis database and has been developed as GraphQl with the same features as virgool (https://virgool.io/home) website.
+unique weblog project is similar to the virgool (https://virgool.io/home) website with features such as the admin & user panel and user authentication system and otp code sending system and connection to the MySQL & Redis database and has been developed as GraphQl with the same features as virgool (https://virgool.io/home) website.
 This project is still on developing, and if you have any features in mind, I will be happy to share them with me in issues. 💪💖
 
 پروژه وبلاگ مشابه سایت `ویرگول` با قابلیت هایی همچون `پنل ادمین` و `کاربر` `سیستم احراز هویت` و `سیستم ارسال کد پیامکی یکبار مصرف` و اتصال به دیتابیس `MySQL` و `Redis` و همچون قابلیت های مشابه وبسایت `ویرگول` بصورت `GraphQl` توسعه داده شده است.
