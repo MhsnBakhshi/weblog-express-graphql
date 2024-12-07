@@ -10,6 +10,9 @@ This project is still on developing, and if you have any features in mind, I wil
 **If the resolvers of this project helped u, thank u for supporting this `repo` with 🌟 `star` 💖**
 
 **اگه `Resolvers` های این پروژه به شما کمکی کرده ممنون میشم با 🌟 Star این `repo` حمایتی کرده باشین 💖**
+
+**دسترسی به دیاگرام پروژه => https://drawsql.app/teams/nodejs-13/diagrams/uniqueblog**
+
 ### نکته
 برای استفاده از قابلیت ارسال کد `OTP`  در قسمت `Getting Started` مقادیر مورد نظر که اشاره شده است را جایگزین کنین.
 
